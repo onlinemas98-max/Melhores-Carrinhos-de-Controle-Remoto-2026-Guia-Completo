@@ -53,7 +53,7 @@
         /* Main Content */
         main { max-width: 1000px; margin: 100px auto 40px; padding: 0 5%; min-height: 80vh; }
 
-        /* Banner Image Style */
+        /* Featured Image Style */
         .featured-image {
             width: 100%;
             max-width: 800px;
@@ -89,9 +89,8 @@
         .card-link { color: var(--primary); font-weight: 700; text-decoration: none; margin-top: auto; }
 
         /* Article Styles */
-        article h1 { font-size: 2.2rem; margin-bottom: 15px; color: var(--dark); }
+        article h1 { font-size: 2.2rem; margin-bottom: 25px; color: var(--dark); }
         article h2 { font-size: 1.8rem; margin: 30px 0 15px; color: var(--dark); border-left: 5px solid var(--primary); padding-left: 15px; }
-        article h3 { font-size: 1.4rem; margin: 25px 0 10px; color: var(--dark); }
         article p { margin-bottom: 20px; font-size: 1.1rem; color: #444; }
         article ul { margin-bottom: 20px; padding-left: 20px; }
         article li { margin-bottom: 8px; }
@@ -116,15 +115,22 @@
             font-size: 1.2rem; 
             transition: 0.3s;
             box-shadow: 0 4px 15px rgba(238, 77, 45, 0.4);
+            border: none;
+            cursor: pointer;
         }
         .btn-shopee:hover { background: var(--primary-hover); transform: scale(1.05); }
 
-        /* Pros & Cons */
-        .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
-        .pros { background: #e7f9ed; padding: 20px; border-radius: 10px; }
-        .cons { background: #fff1f1; padding: 20px; border-radius: 10px; }
+        /* Inner Content Card */
+        .inner-box {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
 
-        /* Footer Light Style */
+        /* Footer Style */
         footer { 
             background: var(--footer-bg); 
             color: var(--footer-text); 
@@ -167,7 +173,6 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .home-hero h1 { font-size: 1.8rem; }
-            .pros-cons { grid-template-columns: 1fr; }
             article h1 { font-size: 1.8rem; }
         }
     </style>
@@ -187,7 +192,7 @@
     </header>
 
     <main id="content-area">
-        <!-- Content loaded via JavaScript -->
+        <!-- O conteúdo será carregado dinamicamente -->
     </main>
 
     <footer>
@@ -215,160 +220,14 @@
     </footer>
 
     <script>
-        // --- CONFIGURAÇÕES ---
         const AFFILIATE_LINK = "https://s.shopee.com.br/8ARoandGu5";
         const FEATURED_IMAGE_URL = "https://i.postimg.cc/brSzxcvY/sg-11134201-7rdwk-mdprfc03dkak6d.jpg";
         
         let currentState = { path: '/' };
 
-        // Mapeamento de URLs para nomes amigáveis (evita URLs técnicas no texto)
         const urlToNameMap = {
             "/": "Início",
-            "<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melhores Carrinhos de Controle Remoto para Iniciantes</title>
-  <meta name="description" content="Descubra os melhores carrinhos de controle remoto para iniciantes em 2026. Veja modelos fáceis de usar, baratos e ideais para começar.">
-  
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-    }
-    nav {
-      background: #222;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 10px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-      background: #fff;
-    }
-    h1, h2 {
-      color: #333;
-    }
-    .card {
-      border: 1px solid #ddd;
-      padding: 15px;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #28a745;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <h1>Melhores Carrinhos de Controle Remoto para Iniciantes</h1>
-</header>
-
-<nav>
-  <a href="index.html">Início</a>
-  <a href="#">Categorias</a>
-  <a href="#">Guias</a>
-  <a href="#">Melhores</a>
-</nav>
-
-<div class="container">
-
-  <p>Os <strong>melhores carrinhos de controle remoto para iniciantes</strong> são ideais para quem deseja começar nesse hobby divertido sem gastar muito e sem complicações. Se você está procurando um modelo fácil de controlar, resistente e com bom custo-benefício, este guia vai te ajudar a escolher a melhor opção.</p>
-
-  <h2>Por que escolher carrinhos para iniciantes?</h2>
-  <p>Quem está começando precisa de um carrinho que seja fácil de usar, tenha boa durabilidade e não exija manutenção complicada. Modelos para iniciantes são projetados justamente para oferecer uma experiência simples e divertida.</p>
-
-  <h2>1. Carrinho RC Básico com Controle Simples</h2>
-  <div class="card">
-    <p>Esse tipo de carrinho é perfeito para quem nunca teve contato com controle remoto. Ele possui comandos simples e resposta rápida, ideal para aprender.</p>
-    <ul>
-      <li>Fácil de controlar</li>
-      <li>Preço acessível</li>
-      <li>Boa durabilidade</li>
-    </ul>
-    <a href="https://s.shopee.com.br/8ARoandGu5" class="btn">Ver preço na Shopee</a>
-  </div>
-
-  <h2>2. Carrinho Off-Road para Iniciantes</h2>
-  <div class="card">
-    <p>Se você quer mais aventura, os modelos off-road são ótimos. Eles funcionam bem em terrenos como terra, grama e areia.</p>
-    <ul>
-      <li>Rodas grandes</li>
-      <li>Alta resistência</li>
-      <li>Ideal para áreas externas</li>
-    </ul>
-    <a href="https://s.shopee.com.br/8ARoandGu5" class="btn">Comprar agora</a>
-  </div>
-
-  <h2>3. Carrinho Elétrico com Boa Bateria</h2>
-  <div class="card">
-    <p>Para quem busca mais tempo de diversão, modelos com bateria durável são a melhor escolha. Alguns chegam a durar até 30 minutos por carga.</p>
-    <ul>
-      <li>Bateria recarregável</li>
-      <li>Maior tempo de uso</li>
-      <li>Ótimo custo-benefício</li>
-    </ul>
-    <a href="https://s.shopee.com.br/8ARoandGu5" class="btn">Ver oferta</a>
-  </div>
-
-  <h2>Dicas importantes antes de comprar</h2>
-  <p>Antes de escolher seu carrinho, fique atento a alguns pontos importantes:</p>
-  <ul>
-    <li>Verifique a autonomia da bateria</li>
-    <li>Prefira modelos resistentes</li>
-    <li>Escolha controle com bom alcance</li>
-    <li>Leia avaliações de outros compradores</li>
-  </ul>
-
-  <h2>Vale a pena comprar carrinho de controle remoto?</h2>
-  <p>Sim! Esse é um dos hobbies mais divertidos e acessíveis atualmente. Além disso, existem opções para todos os níveis, desde iniciantes até profissionais.</p>
-
-  <h2>Conclusão</h2>
-  <p>Agora que você conhece os <strong>melhores carrinhos de controle remoto para iniciantes</strong>, ficou mais fácil escolher o modelo ideal. Comece com um modelo simples, aprenda a controlar e depois evolua para opções mais avançadas.</p>
-
-  <a href="https://s.shopee.com.br/8ARoandGu5" class="btn">🔥 Ver melhores ofertas na Shopee</a>
-
-</div>
-
-<footer>
-  <p>© 2026 - Guia de Carrinhos de Controle Remoto</p>
-</footer>
-
-</body>
-</html>": "para Iniciantes",
+            "/melhores-carrinhos-de-controle-remoto-para-iniciantes.html": "para Iniciantes",
             "/melhores-carrinhos-de-controle-remoto-baratos-e-potentes.html": "Baratos e Potentes",
             "/melhores-carrinhos-de-controle-remoto-alta-velocidade.html": "de Alta Velocidade",
             "/melhores-carrinhos-de-controle-remoto-para-criancas-2026.html": "para Crianças",
@@ -392,7 +251,6 @@
 
         const allUrls = Object.keys(urlToNameMap).filter(url => url !== '/');
 
-        // Função para obter nome limpo
         function getCleanName(path) {
             if (path.includes('blob:') || path.includes('usercontent') || path === 'srcdoc') {
                 path = currentState.path;
@@ -400,69 +258,82 @@
             return urlToNameMap[path] || "Especiais";
         }
 
-        // Definição manual de algumas páginas específicas
+        // Conteúdo da página de Iniciantes completo com apenas um botão final
         const pages = [
             {
                 url: "/melhores-carrinhos-de-controle-remoto-para-iniciantes.html",
-                title: "Melhores Carrinhos de Controle Remoto para Iniciantes: Guia 2026",
+                title: "Melhores Carrinhos de Controle Remoto para Iniciantes 2026",
                 content: `
                     <h1>Melhores Carrinhos de Controle Remoto para Iniciantes</h1>
-                    <img src="${FEATURED_IMAGE_URL}" alt="Carrinho de Controle Remoto" class="featured-image">
-                    <p>Entrar no mundo do automodelismo pode parecer desafiador, mas escolher o equipamento certo faz toda a diferença. Neste guia, analisamos os <strong>melhores carrinhos de controle remoto para iniciantes</strong> disponíveis em 2026, focando em durabilidade, facilidade de controle e, claro, diversão.</p>
+                    <img src="${FEATURED_IMAGE_URL}" alt="Carrinho RC para Iniciantes" class="featured-image">
                     
+                    <p>Os <strong>melhores carrinhos de controle remoto para iniciantes</strong> são ideais para quem deseja começar nesse hobby divertido sem gastar muito e sem complicações. Se você está procurando um modelo fácil de controlar, resistente e com bom custo-benefício, este guia vai te ajudar a escolher a melhor opção.</p>
+
+                    <h2>Por que escolher carrinhos para iniciantes?</h2>
+                    <p>Quem está começando precisa de um carrinho que seja fácil de usar, tenha boa durabilidade e não exija manutenção complicada. Modelos para iniciantes são projetados justamente para oferecer uma experiência simples e divertida.</p>
+
+                    <div class="inner-box">
+                        <h3>1. Carrinho RC Básico com Controle Simples</h3>
+                        <p>Esse tipo de carrinho é perfeito para quem nunca teve contato com controle remoto. Ele possui comandos simples e resposta rápida, ideal para aprender.</p>
+                        <ul>
+                            <li>Fácil de controlar</li>
+                            <li>Preço acessível</li>
+                            <li>Boa durabilidade</li>
+                        </ul>
+                    </div>
+
+                    <div class="inner-box">
+                        <h3>2. Carrinho Off-Road para Iniciantes</h3>
+                        <p>Se você quer mais aventura, os modelos off-road são ótimos. Eles funcionam bem em terrenos como terra, grama e areia.</p>
+                        <ul>
+                            <li>Rodas grandes</li>
+                            <li>Alta resistência</li>
+                            <li>Ideal para áreas externas</li>
+                        </ul>
+                    </div>
+
+                    <div class="inner-box">
+                        <h3>3. Carrinho Elétrico com Boa Bateria</h3>
+                        <p>Para quem busca mais tempo de diversão, modelos com bateria durável são a melhor escolha. Alguns chegam a durar até 30 minutos por carga.</p>
+                        <ul>
+                            <li>Bateria recarregável</li>
+                            <li>Maior tempo de uso</li>
+                            <li>Ótimo custo-benefício</li>
+                        </ul>
+                    </div>
+
+                    <h2>Dicas importantes antes de comprar</h2>
+                    <p>Antes de escolher seu carrinho, fique atento a alguns pontos importantes:</p>
+                    <ul>
+                        <li>Verifique a autonomia da bateria</li>
+                        <li>Prefira modelos resistentes</li>
+                        <li>Escolha controle com bom alcance</li>
+                        <li>Leia avaliações de outros compradores</li>
+                    </ul>
+
+                    <h2>Vale a pena comprar carrinho de controle remoto?</h2>
+                    <p>Sim! Esse é um dos hobbies mais divertidos e acessíveis atualmente. Além disso, existem opções para todos os níveis, desde iniciantes até profissionais.</p>
+
+                    <h2>Conclusão</h2>
+                    <p>Agora que você conhece os <strong>melhores carrinhos de controle remoto para iniciantes</strong>, ficou mais fácil escolher o modelo ideal. Comece com um modelo simples, aprenda a controlar e depois evolua para opções mais avançadas.</p>
+
                     <div class="cta-container">
-                        <h3>Destaque do Mês: Off-Road para Iniciantes</h3>
-                        <p>O modelo mais vendido da Shopee com 5 estrelas de avaliação!</p>
-                        <a href="${AFFILIATE_LINK}" target="_blank" class="btn-shopee">Ver preço na Shopee</a>
+                        <a href="${AFFILIATE_LINK}" target="_blank" class="btn-shopee">🔥 Ver melhores ofertas na Shopee</a>
                     </div>
-
-                    <h2>Top 5 Modelos Recomendados</h2>
-                    <h3>1. WLtoys 144001 - O Rei da Versatilidade</h3>
-                    <p>Embora seja rápido, sua construção robusta permite que novatos aprendam a mecânica básica sem medo de quebras constantes. É ideal para terrenos mistos.</p>
-
-                    <h3>2. HBX 16889A Pro</h3>
-                    <p>Compacto e extremamente resistente. Sua escala 1/16 facilita o transporte e a pilotagem em quintais ou parques pequenos.</p>
-
-                    <div class="pros-cons">
-                        <div class="pros">
-                            <strong>Vantagens:</strong>
-                            <ul>
-                                <li>Controles intuitivos</li>
-                                <li>Baterias de longa duração</li>
-                                <li>Preço acessível na Shopee</li>
-                            </ul>
-                        </div>
-                        <div class="cons">
-                            <strong>Desvantagens:</strong>
-                            <ul>
-                                <li>Velocidade limitada em alguns modelos de entrada</li>
-                                <li>Motores escovados requerem manutenção</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <a href="${AFFILIATE_LINK}" target="_blank" class="btn-shopee">Comprar agora com desconto</a>
                 `
             }
         ];
 
-        // Navegação
         function navigateTo(e, url) {
             if(e) e.preventDefault();
-            try {
-                window.history.pushState({}, "", url);
-            } catch (err) {
-                // Silently ignore in preview environments
-            }
+            try { window.history.pushState({}, "", url); } catch (err) {}
             currentState.path = url;
             renderPage();
             window.scrollTo(0, 0);
         }
 
-        // Renderização Dinâmica
         function renderPage() {
             let path = window.location.pathname;
-            // Sanitização para ambientes de preview/iframe
             if (path.includes('blob:') || path.includes('usercontent') || path === 'srcdoc' || path === '/') {
                 path = currentState.path;
             }
@@ -475,8 +346,8 @@
                 let homeHtml = `
                     <section class="home-hero">
                         <h1>Descubra os Melhores Carrinhos de Controle Remoto de 2026</h1>
-                        <img src="${FEATURED_IMAGE_URL}" alt="Banner Carrinho de Controle Remoto" class="featured-image">
-                        <p>Análises profundas, guias de compra e as melhores ofertas da Shopee em um só lugar. Seja você um iniciante ou um piloto profissional.</p>
+                        <img src="${FEATURED_IMAGE_URL}" alt="Banner Carrinhos de Controle Remoto" class="featured-image">
+                        <p>Análises profundas, guias de compra e as melhores ofertas da Shopee em um só lugar.</p>
                     </section>
                     <div class="home-grid">
                 `;
@@ -498,33 +369,11 @@
                 const page = pages.find(p => p.url === path) || {
                     title: `Melhores Carrinhos ${cleanName} - Guia Completo`,
                     content: `<h1>Melhores Carrinhos ${cleanName}</h1>
-                             <img src="${FEATURED_IMAGE_URL}" alt="Carrinho de Controle Remoto" class="featured-image">
-                             <p>Este guia detalhado explora as melhores opções de carrinhos de controle remoto para quem busca <strong>${cleanName.toLowerCase()}</strong>. O mercado de automodelismo em 2026 trouxe inovações incríveis em motores e durabilidade.</p>
+                             <img src="${FEATURED_IMAGE_URL}" alt="Carrinho RC" class="featured-image">
+                             <p>Este guia explora as melhores opções de carrinhos de controle remoto focado em <strong>${cleanName.toLowerCase()}</strong>.</p>
                              <div class="cta-container">
-                                <h3>Melhores Preços Encontrados</h3>
-                                <p>Filtramos as lojas com melhores avaliações para você comprar com segurança.</p>
                                 <a href="${AFFILIATE_LINK}" target="_blank" class="btn-shopee">Ver preço na Shopee</a>
-                             </div>
-                             <h2>Review Técnico e Performance</h2>
-                             <p>Ao escolher um modelo focado em ${cleanName.toLowerCase()}, é vital considerar a escala e o tipo de terreno. Modelos modernos hoje entregam performance profissional por preços acessíveis.</p>
-                             <div class="pros-cons">
-                                <div class="pros">
-                                    <strong>Pontos Fortes:</strong>
-                                    <ul>
-                                        <li>Alta durabilidade de componentes</li>
-                                        <li>Peças de reposição fáceis de encontrar</li>
-                                        <li>Excelente resposta do controle</li>
-                                    </ul>
-                                </div>
-                                <div class="cons">
-                                    <strong>Atenção:</strong>
-                                    <ul>
-                                        <li>Verificar compatibilidade de bateria</li>
-                                        <li>Tempo de entrega internacional (Shopee)</li>
-                                    </ul>
-                                </div>
-                             </div>
-                             <a href="${AFFILIATE_LINK}" target="_blank" class="btn-shopee">Comprar Agora na Shopee</a>`
+                             </div>`
                 };
 
                 document.getElementById('dynamic-title').innerText = page.title;
@@ -532,7 +381,6 @@
             }
         }
 
-        // Inicializar links do rodapé
         function initFooter() {
             const popularUl = document.getElementById('popular-links');
             const categoryUl = document.getElementById('category-links');
